@@ -5,6 +5,10 @@ var arr = [10,20,30];
 //Create a function named 'first' that is given 'arr' as the argument and  returns the first item in the given array.
 
   //Code Here
+function first() {
+  return arr[0];
+}
+first();
 
 
 //Next problem
@@ -16,7 +20,10 @@ var arr = [40,50,60];
 
 
   //Code Here
-
+function last() {
+  return arr[2];
+}
+last();
 
 //Next Problem
 
@@ -25,8 +32,12 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 //Create a function named 'looper' that is given family as it's only argument, loops through the given array, and alerts every item in the array.
 
   //Code Here
-
-
+function looper() {
+for (var i = 0; i < family.length; i++) {
+  alert(family[i]);
+  }
+}
+looper();
 //Next problem
 
 
@@ -35,7 +46,12 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 //Write a function called reversedLooper that is given letters as it's only argument and loops through the given array backwards alerting every item in the array starting at the end.
 
   //Code Here
-
+function reversedLooper() {
+for (var i = letters.length -1; i >= 0; i--) {
+  alert(letters[i]);
+  }
+}
+reversedLooper();
 
 //Next Problem
 
@@ -44,7 +60,16 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 //Write a function named evenFinder that is given nums as it's only argument and removes all values that aren't even from the given array.
 
   //Code Here
-
+function evenFinder() {
+for (var i = 0; i < nums.length; i++) {
+  if (nums[i] % 2 !== 0) {
+     nums.splice(i,1);
+     i--;
+    }
+  }
+}
+evenFinder();
+console.log(nums);
 
 //Next problem
 
@@ -58,7 +83,19 @@ var odds = [];
 
 
   //Code Here
-
+function divider() {
+for (var i = 0; i < nums.length; i++) {
+  if (nums[i] % 2 === 0) {
+    evens.push(nums[i]);
+  }
+  else if (nums[i] % 2 !== 0) {
+    odds.push(nums[i]);
+  }
+ }
+}
+divider();
+console.log(evens);
+console.log(odds);
 
 //Next Problem
 
@@ -70,6 +107,17 @@ var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
 //Above you're given a function that will return a random number between 0 and 30, and an array full of numbers. Your job is to write a function named finder that will get a random number, then loop through the array to see if that random number is in the array. If it is, return true, if it's not, return false
 
   //Code Here
+var selectedNum = getRandomArbitrary();
+console.log(selectedNum);
+function finder(numArray) {
+  for (var i = 0; i < numArray.length; i++) {
+    if (selectedNum === numArray[i]) {
+      return true;
+   }
+ }
+   return false;
+}
+finder(numbers);
 
 
 //Next problem
